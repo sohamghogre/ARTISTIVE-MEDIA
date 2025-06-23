@@ -1,0 +1,393 @@
+/* Basic Styles - We will add more as we go */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: #5FE3C0; /* Teal color from design */
+}
+
+.menu-icons {
+    font-size: 20px;
+}
+
+.menu-icons .fa-search {
+    margin-right: 20px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+.hero-text {
+    max-width: 90vw; /* Use viewport width for better responsiveness */
+    z-index: 1;
+    text-align: center; /* Use text-align to center the inline-block h1 */
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    font-weight: 700;
+    overflow: hidden;
+    border-right: .1em solid #5FE3C0; /* The typewriter cursor */
+    white-space: nowrap;
+    display: inline-block; /* Change display to inline-block for better animation centering */
+    animation:
+        typing 4s steps(50, end) forwards,
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5FE3C0; }
+}
+
+.intro {
+    padding: 100px 50px;
+    text-align: center;
+    color: #5FE3C0;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.intro .highlight {
+    color: #5FE3C0; /* Teal color from design */
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+}
+
+.about-text {
+    flex-basis: 45%;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #5FE3C0;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.team-members {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.member-info {
+    margin-top: 15px;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.member-info p {
+    margin: 5px 0 0;
+    color: #5FE3C0;
+    font-weight: 600;
+}
+
+.services {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #5FE3C0;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.reels {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.reels::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.reels-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.reels-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.reel-wrapper {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.reel-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.reel {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .reel-wrapper {
+        width: 85vw;
+        height: 85vw;
+    }
+}
+
+.brand-logos {
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.separator {
+    border-bottom: 4px dotted #fff;
+    margin: 20px 0;
+}
+
+.scrolling-brands-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrolling-brands {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.scrolling-brands span {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 40px;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-cta {
+    flex-basis: 45%;
+}
+
+.footer-cta h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-cta p {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.footer-contact {
+    flex-basis: 45%;
+    text-align: right;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a .highlight, .contact-info .highlight {
+    color: #5FE3C0;
+}
+
+.social-icons {
+    margin-top: 40px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffc107; /* Highlight color */
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+} 
